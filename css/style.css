@@ -1427,3 +1427,24 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+
+  /* removing BG Image on small devices */
+
+  .slidebg {
+    background-image: url(images/mthabg.png);
+    background-size: cover; /* Ensures the image covers the entire slide */
+    background-position: center; /* Centers the image */
+}
+
+@media (max-width: 767px) { /* For small devices */
+    .slidebg {
+        background-image: none; /* Hides the background image */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* For medium devices */
+    .slidebg {
+        background-image: none; /* Hides the background image */
+    }
+}
