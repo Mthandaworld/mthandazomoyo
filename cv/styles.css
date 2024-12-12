@@ -230,33 +230,80 @@ body {
 }
 
 /* Services Section */
+/* Services Section */
 .services {
     padding: 3rem 0;
     text-align: center;
-}
-
-.services h2 {
+  }
+  
+  .services h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-}
-
-.service-cards {
-    display: flex;
-    justify-content: space-around;
-}
-
-.card {
+    color: #007bff;
+  }
+  
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .card {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 30%;
-}
-
-.card h3 {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-}
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ctaservices {
+    background: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .ctaservices:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-cards {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+  }
+  
 
 /* Portfolio Section */
 .portfolio {
@@ -387,7 +434,34 @@ form button:hover {
   .ctaservices{
     margin-top: 20px;
   }
-
+  .ctaservices:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  .card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-in-out forwards;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .services-intro {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  
   /* Portifolio */
 
   .portfolio-item img{
@@ -558,4 +632,13 @@ form button:hover {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+
+  /* Extra Tweaks */
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  
+  
   
