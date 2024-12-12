@@ -1,0 +1,5 @@
+Primary color #0D2037
+Secondary Color #7CA4D4
+Hover color #004AAD
+danube #7CA4D4
+light spindle #B5CAE7
